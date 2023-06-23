@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COC Login</title>
+    
+    <style>
+        
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body{
+      max-width: 100;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      letter-spacing: 1px;
+      background: url(https://vignette.wikia.nocookie.net/clashofclans/images/5/50/Wiki-background/revision/latest?cb%5Cu003d20181205103057)no-repeat fixed right top/cover;
+
+  }
+  .login_form_container{
+      position: relative;
+      width: 400px;
+      height: 470px;
+      max-width: 400px;
+      max-height: 470px;
+      background: #dddfe8;
+      border-radius: 50px 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin-top: 70px;background: transparent;
+      opacity: 10;
+      z-index: 1;
+      backdrop-filter: ;
+      color: #dddfe8;
+      
+  }
+  .login_form_container::before{
+      
+      position: absolute;
+      width: 170%;
+      height: 170%;
+      content: '';
+      /* background-image: conic-gradient(transparent, transparent, transparent, #ee00ff); */
+      animation: rotate_border 6s linear infinite;
+  
+  }
+  .login_form_container::after{
+      
+      position: absolute;
+      width: 170%;
+      height: 170%;
+      /* content: ''; */
+      /* background-image: conic-gradient(transparent, transparent, transparent, #00ccff); */
+      /* animation: rotate_border 6s linear infinite; */
+      animation-delay: -3s;
+  }
+  @keyframes rotate_border{
+      0%{
+          transform: rotate(0deg);
+      }
+      100%{
+          transform: rotate(360deg);
+      }
+  }
+  .login_form{
+      position: absolute;
+      content: '';
+      /* background-color: #0c1022; */
+      border-radius: 50px 5px;
+      inset: 5px;
+      padding: 50px 40px;
+      z-index: 10;
+      /* color: #00ccff; */
+      background: transparent;
+  
+  } 
+  .submit{
+    color: white;
+    cursor: pointer;
+    transition:.8s ease all;
+    -webkit-transition:.8
+  }
+  h2{
+      font-size: 40px;
+      font-weight: 600;
+      text-align: center;
+  }
+  .input_group{
+      margin-top: 40px;
+      position:relative;
+      display:flex;
+      align-items: center;
+      justify-content: start;
+  }
+  .input_text{
+      width: 95%;
+      height: 30px;
+      background: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid #00ccff;
+      font-size: 20px;
+      padding-left: 10px;
+      color: #fbfeff;
+  
+  }
+  ::placeholder{
+      font-size: 15px;
+      color:white;
+      letter-spacing: 1px;
+  
+  }
+  .fa{
+      font-size: 20px;
+  
+  }
+  #login_button{
+      position: relative;
+      width: 300px;
+      height: 40px;
+      transition: 1s;
+      margin-top: 70px;
+  
+  
+  }
+  #login_button button{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      z-index: 10;
+      cursor: pointer;
+      font-size: 22px;
+      letter-spacing: 2px;
+      border: 1px solid #00ccff;
+      border-radius: 50px;
+      background-color: #0c1022;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .fotter {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      
+  
+  }
+  .fotter a{
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 18px;
+      color:#fff;
+          
+  }
+  .glowIcon {
+      text-shadow: 0 0 10px #00ccff;
+  
+  }
+    </style>
+</head>
+<body>
+        <div class="login_form_container">
+          <div class="login_form">
+            <h2>Login</h2>
+            <div class="input_group">
+              <i class="fa fa-user"></i>
+              <input
+                type="text"
+                placeholder="Username"
+                class="input_text"
+       
+                id="user"
+              />
+            </div>
+            <div class="input_group">
+              <i class="fa fa-unlock-alt"></i>
+              <input
+                type="password"
+                placeholder="Password"
+                class="input_text"
+
+                id="pass"
+              />
+            </div>
+            <div class="button_group" id="login_button">
+              <button class="submit" onclick="validate()">Submit</button>
+            </div>
+            <div class="fotter">
+              <a>Forgot Password ?</a>
+              <a href="./signup.html">SignUp</a>
+            </div>
+          </div>
+        </div> 
+        <script src="https://kit.fontawesome.com/0ce631c486.js" crossorigin="anonymous"></script>
+     <script type="text/javascript" src="bg.js/custom1.js"></script>
+</body>
+<script>
+ function validate()
+ {
+    user = document.getElementById("user").value
+    pass = document.getElementById("pass").value
+    if(user == "Admin" && pass=="12345")
+    window.location.href="index.html"
+    else
+    alert('Please Enter correct Username and password')
+ }
+</script>
+</html>

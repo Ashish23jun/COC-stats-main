@@ -5,6 +5,7 @@
     font-family: 'Poppins', sans-serif;
     list-style: none;
     text-decoration: none;
+   
     
 }
 header{
@@ -64,18 +65,31 @@ header{
     
     height: 100%;
     width: 100%;
-    min-height: 100vh;
     background: url(wp2253526.jpg);
-    position: absolute;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+    text-align: left;
+    
     align-items: center;
     gap: 2rem; 
-   
+    border: 1px solid black;
+}
+.contact{
+    
+    height: 100%;
+    width: 100%;
+    background: url(https://cdn.wallpapersafari.com/43/7/JAjF8n.jpeg);
+    min-height: 100vh;
+    text-align: left;
+    /* display: grid;
+    position: absolute; */
+    align-items: center;
+    gap: 2rem; 
+    border: 1px solid black;
 }
 
 section{
     padding: 0 19%;
+    display: flex;
 }
 .hero-text{
     font-size: 14px;
@@ -87,6 +101,7 @@ section{
 .about-text{
     font-size: 14px;
     font-weight: 400;
+
     color: white;
     margin-bottom: 40px;
 
@@ -126,9 +141,13 @@ section{
 }
 .about-text p{
     color: white;
+    width: 50%;
     font-size: 15px;
     line-height: 1.9;
     margin-bottom: 40px;
+    padding: 10px;
+
+    
 }
 .hero-img img{
     width: 700px;
@@ -312,4 +331,27 @@ section{
         width: 100%;
         height: auto;
     }
+}
+.hello{
+    background-color: black;
+}
+.hi{
+    background-color: #ddebde90;
+    width: 30vw;
+    border-radius: 25px;
+    padding: 2vw;
+}
+.inpbox{
+    display: flex;
+}
+.inp{
+    height: 48px;
+    width: 10vw;
+    border-radius: 10px;
+}
+.txt{
+    height: 128px;
+    border-radius: 10px;
+
+    width: 10vw;
 }
